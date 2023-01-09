@@ -1,0 +1,7 @@
+# vim: set ft=sh:
+# shellcheck shell=sh
+
+copy_exec pdata_tools
+for _bin in check delta dump ls metadata_size repair restore rmap trim; do
+	copy_file "/usr/bin/thin_${_bin}" "/usr/bin/thin_${_bin}"
+done
